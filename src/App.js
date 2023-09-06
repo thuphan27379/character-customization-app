@@ -13,6 +13,7 @@ const total = {
   clothing1: 5,
   clothing2: 5,
   clothing3: 9,
+  hats: 28, //
 };
 
 function App() {
@@ -25,6 +26,8 @@ function App() {
   const [clothing3, setClothing3] = useState(0);
   const [mouth, setMouth] = useState(2);
   const [glasses, setGlasses] = useState(2);
+  const [hats, setHats] = useState(1); //
+
   const randomize = () => {
     setBody(Math.floor(Math.random() * total.body));
     setEyes(Math.floor(Math.random() * total.eyes));
@@ -36,6 +39,7 @@ function App() {
     setClothing1(Math.floor(Math.random() * total.clothing1));
     setClothing2(Math.floor(Math.random() * total.clothing2));
     setClothing3(Math.floor(Math.random() * total.clothing3));
+    setHats(Math.floor(Math.random() * total.hats)); //
   };
   useEffect(() => {
     randomize();
@@ -59,6 +63,7 @@ function App() {
               mouth={mouth}
               eyebrow={eyebrows}
               glasses={glasses}
+              hats={hats} //
             />
             <div className="text-center">
               <button className="button" onClick={() => randomize()}>
@@ -152,6 +157,16 @@ function App() {
               selected={clothing3}
               zoom={2}
               top="-15px"
+            />
+          </div>
+          <div className="list-section">
+            {/*  */}
+            <h2>Hat</h2>
+            <PartList
+              total={total.hats}
+              path="accessories/hats"
+              set={setHats}
+              selected={hats}
             />
           </div>
         </div>

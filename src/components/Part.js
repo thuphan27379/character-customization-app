@@ -1,7 +1,7 @@
 import React from "react";
 
 export const Part = ({ path, index, zIndex }) => {
-  
+  // tung cai character de select
   console.log("rerender");
   return (
     <img

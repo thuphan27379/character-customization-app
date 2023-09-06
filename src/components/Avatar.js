@@ -2,6 +2,7 @@ import React from "react";
 import { Part } from "./Part";
 
 const Avatar = (
+  // avatar random
   {
     body,
     eyes,
@@ -12,6 +13,7 @@ const Avatar = (
     mouth,
     eyebrow,
     glasses,
+    hats, //
   },
   ref
 ) => {
@@ -27,6 +29,8 @@ const Avatar = (
       <Part path="noses" index={0} zIndex={4} />
       <Part path="eyebrows" index={eyebrow} zIndex={4} />
       <Part path="accessories/glasses" index={glasses} zIndex={5} />
+      <Part path="accessories/hats" index={hats} zIndex={5} />
+      {/*  */}
     </div>
   );
 };

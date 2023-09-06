@@ -1,6 +1,7 @@
 import React from "react";
 
 export const PartList = ({
+  // list of character
   total,
   path,
   set,
